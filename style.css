@@ -1,0 +1,52 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(30,30,30);
+    color: slateblue;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 30vw 800px 30vw;
+    grid-template-rows: 13vh 800px 5vh;
+    grid-template-areas: 
+    "l title r"
+    "l drawer r"
+    "l footer r";
+}
+
+.title{
+    grid-area: title;
+    text-align: center;
+}
+
+h1{
+    font-size: 48px;
+    margin: 0 0 5px 0;
+}
+
+.button{
+    font-size: large;
+}
+
+.container{
+    grid-area: drawer;
+    background-color: white;
+    box-shadow: 5px 10px slateblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+}
+
+.grid{
+    box-sizing: border-box;
+    border: 1px dotted slategray;
+}
+
+.draw{
+    background-color: black;
+}
+
+.erase{
+    background-color: white;
+}
