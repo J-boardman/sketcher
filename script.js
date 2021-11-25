@@ -41,7 +41,7 @@ const newGrids = document.querySelector('.resize');
 
 newGrids.addEventListener('click',resize);
 function resize(){
-    let newDimensions=prompt();
+    let newDimensions=prompt('How many squares would you like on each side? MAX 100');
     while(container.firstChild) {
         container.removeChild(container.firstChild);
     }
