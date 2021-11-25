@@ -1,5 +1,9 @@
 <To-Do>
 
+4. (Optional): Instead of just changing the color of a square from black to white (for example), have each pass through with the mouse to change it to a completely random RGB value. Then try having each pass just add another 10% of black to it so that only after 10 passes if the square completel black.
+
+<Completed>
+    
 1. Create a webpage with a 16x16 grid of square divs.
     1. Create the divs using JS.
     2. Create divs within a container div in HTML.
@@ -15,9 +19,3 @@
     1. Research button tags in HTML, and how you can make a JS function when one is clicked.
     2. Also check out prompts.
     3. You should be able to enter 64 and have a brand new 64x64 grid pop up without changing the total amount of pixels used.
-
-4. (Optional): Instead of just changing the color of a square from black to white (for example), have each pass through with the mouse to change it to a completely random RGB value. Then try having each pass just add another 10% of black to it so that only after 10 passes if the square completel black.
-
-5. Push your project to GitHub!
-
-<Completed>
