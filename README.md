@@ -1,3 +1,7 @@
+#Etch-a-Sketch
+https://j-boardman.github.io/sketcher/
+- Made as a part of The Odin Project Fundamentals course.
+
 To-Do:
 
 4. (Optional): Instead of just changing the color of a square from black to white (for example), have each pass through with the mouse to change it to a completely random RGB value. Then try having each pass just add another 10% of black to it so that only after 10 passes if the square completel black.
