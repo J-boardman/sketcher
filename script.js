@@ -13,8 +13,8 @@ const sketcher = (() => {
       div.addEventListener('click', () => checkEraser(div))
       
       div.classList.add('grid');
-      div.style['width'] = `${100/(grids)}%`;
-      div.style['height'] = `${100/(grids)}%`;
+      div.style.width = `${100/(grids)}%`;
+      div.style.height = `${100/(grids)}%`;
     }
   }
   //EVENT LISTENERS
@@ -25,10 +25,9 @@ const sketcher = (() => {
   const color = (grid) => {
     eraser.checked ? null : grid.style['background-color'] = colorSelector.value;
   }
-  
-  const checkEraser = (grid) =>{
+
+  const checkEraser = (grid) => {
     eraser.checked ? grid.style['background-color'] = 'white' : colorSelector.value
   }
-
   render();
 })();
