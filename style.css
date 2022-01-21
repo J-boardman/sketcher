@@ -53,7 +53,7 @@ footer{
   font-size: 14px;
   align-items: center;
   gap: 10px;
-  position: absolute;
+  position: sticky;
   bottom: 0px;
 }
 
