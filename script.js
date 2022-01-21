@@ -17,8 +17,8 @@ const sketcher = (() => {
       div.addEventListener(paintOn.value, () => color(div),true);
       div.addEventListener('click', () => checkEraser(div))
       div.classList.add('grid');
-      div.style['width'] = `${100/(grids)}%`;
-      div.style['height'] = `${100/(grids)}%`;
+      div.style.width = `${100/(grids)}%`;
+      div.style.height = `${100/(grids)}%`;
     }
   }
   //ADDITIONAL FUNCTIONS
