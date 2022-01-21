@@ -1,4 +1,4 @@
-# Project Name
+# Etch-a-Sketch!
 
 ## [Live Page](https://j-boardman.github.io/sketcher)
 
