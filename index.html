@@ -12,9 +12,9 @@
   <h1>Etch-a-Sketch!</h1>
   <div class='no-resets'>
     <input type="color" name="Color Chooser" id="colorSelector">  
-    <div>Eraser: 
+    <div>Eraser (click to use): 
       <input type="checkbox" name="eraser" id="eraser">
-      <input type="button" value="Clear all" id="clear">
+      <input type="button" value="Clear" id="clear">
     </div>
 </div>
   <section class="container" id="container">
@@ -22,14 +22,25 @@
 
   <section class="ui" id="ui">
     <div class='resets'>
-      <span id="display"> </span>
-      <input type="range" name="Grid Changer" id="rangeInput" min=2 max=32>
+      <div>
+        <h2 id="display"> </h2>
+        <input type="range" name="Grid Changer" id="rangeInput" min=2 max=32>
+      </div>
       <label for="Paint">Painting style:
         <select name="Paint" id="paintOn">
           <option value="mouseover">Hover</option>
           <option value="click">Click</option>
-        </select></label>
-      </div>
+        </select>
+      </label>
+    </div>
   </section>
+  <footer>
+    <p>
+      Made as part of The Odin Project's Fundamentals Course. Check out <a href="./v1/old-index.html">v1 here</a> or the source code →
+    </p> 
+    <a href="https://www.github.io/J-boardman/sketcher" target="blank">
+      <img src="./GitHub-Mark-32px.png" alt="source-code  ">
+    </a>
+  </footer>
 </body>
 </html>
