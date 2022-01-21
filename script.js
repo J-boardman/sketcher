@@ -26,7 +26,7 @@ const sketcher = (() => {
     eraser.checked ? null : grid.style['background-color'] = colorSelector.value;
   }
 
-  const checkEraser = (grid) =>{
+  const checkEraser = (grid) => {
     eraser.checked ? grid.style['background-color'] = 'white' : colorSelector.value
   }
   render();
