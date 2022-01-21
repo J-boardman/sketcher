@@ -1,49 +1,33 @@
-const container = document.querySelector('.container');
+const sketcher = (() => {
+  //EVENT LISTENERS
+  rangeInput.addEventListener('input', () => render());
+  paintOn.addEventListener('input', () => render());
+  clear.addEventListener('click', () => render());
+  
+  //DOM RENDER
+  const render = () => {
+    let grids = rangeInput.value
+    display.textContent = `${grids} x ${grids}`;
 
-//Function to make the right amount of grids, and add the class to fit them within the container
-function makeGrids(val){
-    
-    //Maths for grid amount and dimensions
-    let num = val*val;
-    let gridDimension = 800/val;
-    
-    for(let i=0; i<num; i++){
-        const makeGrid = document.createElement('div');
-        container.appendChild(makeGrid)
-        
-        makeGrid.classList.add('grid');
-        makeGrid.style.height=gridDimension+'px'
-        makeGrid.style.width=gridDimension+'px'
+    while (container.firstChild) container.removeChild(container.lastChild);
+
+    for(let i=0;i<(grids*grids);i++){
+      let div = container.appendChild(document.createElement('div'));
+
+      div.addEventListener(paintOn.value, () => color(div),true);
+      div.addEventListener('click', () => checkEraser(div))
+      div.classList.add('grid');
+      div.style['width'] = `${100/(grids)}%`;
+      div.style['height'] = `${100/(grids)}%`;
     }
-    const grids = document.querySelectorAll('.grid');
-    grids.forEach(div => div.addEventListener('mouseover', paint));
-}
+  }
+  //ADDITIONAL FUNCTIONS
+  const color = (grid) => {
+    eraser.checked ? null : grid.style['background-color'] = colorSelector.value;
+  }
 
-makeGrids(16);
-
-//Painting function
-function paint() {
-    this.classList.add('draw');
-}
-
-//Erase function
-const btn = document.querySelectorAll('.button');
-
-btn.forEach(button => button.addEventListener('click',erase));
-
-function erase(){
-    const grids = document.querySelectorAll('.grid');
-    grids.forEach(div => div.classList.remove('draw'))
-}
-
-//Resize the grid
-const newGrids = document.querySelector('.resize');
-
-newGrids.addEventListener('click',resize);
-function resize(){
-    let newDimensions=prompt('How many squares would you like on each side? MAX 100');
-    while(container.firstChild) {
-        container.removeChild(container.firstChild);
-    }
-    makeGrids(newDimensions);;
-}
+  const checkEraser = (grid) =>{
+    eraser.checked ? grid.style['background-color'] = 'white' : colorSelector.value
+  }
+  render();
+})();

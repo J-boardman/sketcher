@@ -1,21 +1,35 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Etch-a-Sketch!</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+  <title>Sketcher</title>
+</head>
+<body>
+  <h1>Etch-a-Sketch!</h1>
+  <div class='no-resets'>
+    <input type="color" name="Color Chooser" id="colorSelector">  
+    <div>Eraser: 
+      <input type="checkbox" name="eraser" id="eraser">
+      <input type="button" value="Clear all" id="clear">
+    </div>
+</div>
+  <section class="container" id="container">
+  </section>
 
-    <body class="bod">
-        <div class="title">
-        <h1>Etch-a-Sketch!</h1>
-        <div class="buttons">
-        <button class="button">Clear</button>
-        <button class="button resize">Resize</button>
-        </div>
-        </div>
-        
-        <div class="container"></div>
-    </body>
+  <section class="ui" id="ui">
+    <div class='resets'>
+      <span id="display"> </span>
+      <input type="range" name="Grid Changer" id="rangeInput" min=2 max=32>
+      <label for="Paint">Painting style:
+        <select name="Paint" id="paintOn">
+          <option value="mouseover">Hover</option>
+          <option value="click">Click</option>
+        </select></label>
+      </div>
+  </section>
+</body>
 </html>
